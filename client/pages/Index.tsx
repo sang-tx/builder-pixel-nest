@@ -111,7 +111,7 @@ const CompanyTable = () => {
       content: "109名［陸上81名、海上28名］（2025年7月1日現在）"
     },
     {
-      label: "��航船腹",
+      label: "運航船腹",
       content: "49隻（2025年7月1日現在）　※海外子会社の運航船腹を含む"
     },
     {
@@ -126,16 +126,16 @@ const CompanyTable = () => {
   ];
 
   return (
-    <div className="w-full border border-nyk-border rounded-[4px] bg-white overflow-hidden">
+    <div className="w-full border border-nyk-border rounded-[4px] bg-white overflow-hidden overflow-x-auto">
       {tableData.map((row, index) => (
-        <div key={index} className="flex min-h-0">
-          <div className="w-[248px] flex-shrink-0 bg-nyk-table-header border-t border-l border-nyk-border p-[10px_12px] flex items-center">
-            <span className="font-yu-gothic text-[14px] font-bold text-black leading-[130%]">
+        <div key={index} className="flex min-h-0 min-w-[600px] sm:min-w-0">
+          <div className="w-[200px] sm:w-[248px] flex-shrink-0 bg-nyk-table-header border-t border-l border-nyk-border p-[10px_12px] flex items-center">
+            <span className="font-yu-gothic text-[12px] sm:text-[14px] font-bold text-black leading-[130%]">
               {row.label}
             </span>
           </div>
           <div className="flex-1 border-t border-l border-nyk-border p-[10px_12px] flex items-center bg-white">
-            <div className="font-yu-gothic text-[14px] text-black whitespace-pre-line leading-[130%]">
+            <div className="font-yu-gothic text-[12px] sm:text-[14px] text-black whitespace-pre-line leading-[130%]">
               {row.hasLinks ? (
                 <span dangerouslySetInnerHTML={{
                   __html: row.content
