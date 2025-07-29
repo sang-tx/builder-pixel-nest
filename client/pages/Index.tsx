@@ -24,7 +24,7 @@ const Header = () => {
             <span className="font-yu-gothic text-[14px] font-medium text-black leading-[130%]">会社概要</span>
             <ChevronDownIcon />
           </div>
-          <Link to="/business" className="font-yu-gothic text-[14px] font-medium text-black leading-[130%]">事業内��</Link>
+          <Link to="/business" className="font-yu-gothic text-[14px] font-medium text-black leading-[130%]">事業内容</Link>
           <Link to="/news" className="font-yu-gothic text-[14px] font-medium text-black leading-[130%]">お知らせ</Link>
           <Link to="/fleet" className="font-yu-gothic text-[14px] font-medium text-black leading-[130%]">運航船腹</Link>
           <Link to="/careers" className="font-yu-gothic text-[14px] font-medium text-black leading-[130%]">採用情報</Link>
@@ -39,7 +39,7 @@ const Breadcrumb = () => {
   return (
     <div className="font-yu-gothic text-[16px] text-black">
       <Link to="/" className="text-black">ホーム</Link>
-      <span className="text-nyk-red mx-1">></span>
+      <span className="text-nyk-red mx-1">&gt;</span>
       <span className="text-black">会社概要</span>
     </div>
   );
