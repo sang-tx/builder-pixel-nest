@@ -65,8 +65,14 @@ export default {
         },
       },
       fontFamily: {
-        'yu-gothic': ['"Yu Gothic"', '-apple-system', 'Roboto', 'Helvetica', 'sans-serif'],
-        'inter': ['Inter', '-apple-system', 'Roboto', 'Helvetica', 'sans-serif'],
+        "yu-gothic": [
+          '"Yu Gothic"',
+          "-apple-system",
+          "Roboto",
+          "Helvetica",
+          "sans-serif",
+        ],
+        inter: ["Inter", "-apple-system", "Roboto", "Helvetica", "sans-serif"],
       },
       borderRadius: {
         lg: "var(--radius)",

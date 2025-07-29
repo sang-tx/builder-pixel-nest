@@ -20,16 +20,34 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/business" element={<PlaceholderPage title="事業内容" />} />
+          <Route
+            path="/business"
+            element={<PlaceholderPage title="事業内容" />}
+          />
           <Route path="/news" element={<PlaceholderPage title="お知らせ" />} />
           <Route path="/fleet" element={<PlaceholderPage title="運航船腹" />} />
-          <Route path="/careers" element={<PlaceholderPage title="採用情報" />} />
-          <Route path="/contact" element={<PlaceholderPage title="お問い合わせ" />} />
+          <Route
+            path="/careers"
+            element={<PlaceholderPage title="採用情報" />}
+          />
+          <Route
+            path="/contact"
+            element={<PlaceholderPage title="お問い合わせ" />}
+          />
           <Route path="/company" element={<Index />} />
-          <Route path="/message" element={<PlaceholderPage title="社長ご挨拶" />} />
-          <Route path="/officers" element={<PlaceholderPage title="役員一覧" />} />
+          <Route
+            path="/message"
+            element={<PlaceholderPage title="社長ご挨拶" />}
+          />
+          <Route
+            path="/officers"
+            element={<PlaceholderPage title="役員一覧" />}
+          />
           <Route path="/history" element={<PlaceholderPage title="沿革" />} />
-          <Route path="/privacy" element={<PlaceholderPage title="プライバシーポリシー" />} />
+          <Route
+            path="/privacy"
+            element={<PlaceholderPage title="プライバシーポリシー" />}
+          />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
