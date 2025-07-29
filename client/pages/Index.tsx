@@ -8,17 +8,20 @@ const ChevronDownIcon = () => (
 );
 
 const Header = () => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   return (
-    <header className="w-full h-[100px] px-4 lg:px-[120px] border-b border-black/30 bg-white">
+    <header className="w-full min-h-[100px] px-4 lg:px-[120px] border-b border-black/30 bg-white">
       <div className="max-w-[1200px] mx-auto h-full flex items-center justify-between py-[31px]">
         <div className="flex items-center justify-center pb-[5px]">
-          <img 
+          <img
             src="https://api.builder.io/api/v1/image/assets/TEMP/9d040409a145ca932e697b688b2fc245382791af?width=532"
             alt="NYK Energy Ocean"
-            className="w-[266px] h-[31px]"
+            className="w-[200px] h-[23px] lg:w-[266px] lg:h-[31px]"
           />
         </div>
-        
+
+        {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center gap-[15px]">
           <div className="flex items-center">
             <span className="font-yu-gothic text-[14px] font-medium text-black leading-[130%]">会社概要</span>
@@ -30,7 +33,34 @@ const Header = () => {
           <Link to="/careers" className="font-yu-gothic text-[14px] font-medium text-black leading-[130%]">採用情報</Link>
           <Link to="/contact" className="font-yu-gothic text-[14px] font-medium text-black leading-[130%]">お問い合わせ</Link>
         </nav>
+
+        {/* Mobile Menu Button */}
+        <button
+          className="lg:hidden flex flex-col gap-1"
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+        >
+          <div className="w-6 h-0.5 bg-black"></div>
+          <div className="w-6 h-0.5 bg-black"></div>
+          <div className="w-6 h-0.5 bg-black"></div>
+        </button>
       </div>
+
+      {/* Mobile Menu */}
+      {mobileMenuOpen && (
+        <nav className="lg:hidden border-t border-black/30 bg-white p-4">
+          <div className="flex flex-col gap-4">
+            <div className="flex items-center gap-2">
+              <span className="font-yu-gothic text-[14px] font-medium text-black">会社概要</span>
+              <ChevronDownIcon />
+            </div>
+            <Link to="/business" className="font-yu-gothic text-[14px] font-medium text-black">事業内容</Link>
+            <Link to="/news" className="font-yu-gothic text-[14px] font-medium text-black">お知らせ</Link>
+            <Link to="/fleet" className="font-yu-gothic text-[14px] font-medium text-black">運航船腹</Link>
+            <Link to="/careers" className="font-yu-gothic text-[14px] font-medium text-black">採用情報</Link>
+            <Link to="/contact" className="font-yu-gothic text-[14px] font-medium text-black">お問い合わせ</Link>
+          </div>
+        </nav>
+      )}
     </header>
   );
 };
@@ -81,7 +111,7 @@ const CompanyTable = () => {
       content: "109名［陸上81名、海上28名］（2025年7月1日現在）"
     },
     {
-      label: "運航船腹",
+      label: "��航船腹",
       content: "49隻（2025年7月1日現在）　※海外子会社の運航船腹を含む"
     },
     {
