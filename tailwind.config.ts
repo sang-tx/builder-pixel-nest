@@ -57,6 +57,16 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        nyk: {
+          orange: "hsl(var(--nyk-orange))",
+          red: "hsl(var(--nyk-red))",
+          border: "hsl(var(--nyk-border))",
+          "table-header": "hsl(var(--nyk-table-header))",
+        },
+      },
+      fontFamily: {
+        'yu-gothic': ['"Yu Gothic"', '-apple-system', 'Roboto', 'Helvetica', 'sans-serif'],
+        'inter': ['Inter', '-apple-system', 'Roboto', 'Helvetica', 'sans-serif'],
       },
       borderRadius: {
         lg: "var(--radius)",
