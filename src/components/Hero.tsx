@@ -19,7 +19,7 @@ const Hero = () => {
       
       {/* Content */}
       <div className="relative z-10 text-center text-primary-foreground max-w-4xl mx-auto px-6">
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
+        <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in" style="line-height: auto">
           Build Amazing
           <span className="block text-transparent bg-clip-text bg-gradient-to-r from-white to-primary-glow">
             Digital Experiences
